@@ -1,4 +1,4 @@
-import {add,add2, addWithException} from "./";
+import {add,add2, addWithException} from "./basiceSample";
 
 describe("add",()=>{
     test("add:1+2は3",()=>{
@@ -80,5 +80,42 @@ describe("小数点の検証",()=>{
         expect(0.1+0.2).toBeCloseTo(0.3);
         expect(0.1+0.2).toBeCloseTo(0.3,15);
         expect(0.1+0.2).not.toBeCloseTo(0.3,16);
+    });
+});
+
+describe("文字列の検証",()=>{
+    const str="hello world"
+    test("検証値は期待値と等しい",()=>{
+        expect(str).toBe("hello world");
+        expect(str).toEqual("hello world");
+    })
+    test("toContain",()=>{
+        expect(str).toContain("world");
+        expect(str).not.toContain("wir");
+    })
+    test("toMatch",()=>{
+        expect(str).toMatch(/world/);
+        expect(str).not.toMatch(/see/);
+    })
+    test("toHaveLength",()=>{
+        expect(str).toHaveLength(str.length);
+    })
+})
+//  ステータスコードに適用
+describe("ステータスコードの検証",()=>{
+    const str="hello world"
+    const obj={status:200,message:str};
+
+    test("stringContaining",()=>{
+        expect(obj).toEqual({
+            status:200,
+            message:expect.stringContaining("world"),
+        });
+    });
+    test("stringMatching",()=>{
+        expect(obj).toEqual({
+            status:200,
+            message:expect.stringMatching("hello"),
+        });
     });
 });

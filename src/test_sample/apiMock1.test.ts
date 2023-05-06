@@ -22,3 +22,18 @@ test("データ取得成功時:ユーザー名がある場合",async ()=>{
     });
     await expect(getGreet()).resolves.toBe("Hello, taro");
 });
+
+test("データ取得失敗時",async ()=>{
+    //  getMyProfileがrejectされた時の値を再現
+    jest.spyOn(Fetchers,"getMyProfile").mockRejectedValueOnce(Fetchers.httpError);
+    // await expect(getGreet()).rejects.toMatchObject({
+    //     name:"500",
+    //     message:"internal server error"
+    // });
+    try{
+        await getGreet();
+    }catch(err){
+        expect(err).toMatchObject(Fetchers.httpError);
+    }
+
+});

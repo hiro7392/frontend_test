@@ -1,3 +1,5 @@
+import { DummyTodos } from "../mocks/sampleTodos";
+
 export type Todo={
     id:string,
     content:string,
@@ -5,3 +7,4 @@ export type Todo={
     updated_at?:string,
     tag:string,
 };
+export type Todos=typeof DummyTodos

@@ -1,7 +1,8 @@
-import { Todo } from "../domain/task"
-export const DummyTodos:Todo[]=[
+import { Task } from "../domain/task"
+export const DummyTodos:Task[]=[
     {
         id:"xxxx",
+        title:"title1",
         content:"サンプルtodo1",
         created_at:"2023-05-05",
         updated_at:"2023-05-06",
@@ -9,6 +10,7 @@ export const DummyTodos:Todo[]=[
     },
     {
         id:"xxxx",
+        title:"title1",
         content:"サンプルtodo2",
         created_at:"2023-05-05",
         updated_at:"2023-05-06",
@@ -16,6 +18,7 @@ export const DummyTodos:Todo[]=[
     },
     {
         id:"xxxx",
+        title:"title1",
         content:"サンプルtodo3",
         created_at:"2023-05-05",
         updated_at:"2023-05-06",

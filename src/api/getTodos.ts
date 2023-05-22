@@ -1,4 +1,4 @@
-import { Todos } from "../domain/todo";
+import { Todos } from "../domain/task";
 
 const endpoint="https://myapi.com/";
 

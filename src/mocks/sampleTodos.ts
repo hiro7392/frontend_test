@@ -1,4 +1,4 @@
-import { Todo } from "../domain/todo"
+import { Todo } from "../domain/task"
 export const DummyTodos:Todo[]=[
     {
         id:"xxxx",

@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { Task } from "../../domain/task";
+import { StarRatingOrganism } from "../organisms/StarRatingOrganism";
 
 
 const useStyles = makeStyles({

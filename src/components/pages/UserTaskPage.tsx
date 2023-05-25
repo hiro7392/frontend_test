@@ -3,6 +3,7 @@ import { DummyTodos } from "../../mocks/sampleTodos";
 import TaskListTemplate from "../templates/UserTaskTemplate";
 import TaskList from "../organisms/TaskLists";
 import { Task } from "../../domain/task";
+import { StarRatingOrganism } from "../organisms/StarRatingOrganism";
 
 const todoStyles={
     backgroundColor:"rgb(200,200,200)",
@@ -16,6 +17,7 @@ export const UserTaskPage:React.FC=()=>{
             <TaskListTemplate>
                 <TaskList tasks={todos} />
             </TaskListTemplate>
+            <StarRatingOrganism/>
         </div>
     )
 }
